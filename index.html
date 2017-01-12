@@ -7,30 +7,59 @@
     <link rel="stylesheet" href="css/master.min.css">
   </head>
   <body>
-    <div class="pluginList">
-      <ul class="nav nav-pills nav-stacked">
-    <li role="presentation" class="active"><a href="#">Home</a></li>
-    <li role="presentation"><a href="#">Profile</a></li>
-    <li role="presentation"><a href="#">Messages</a></li>
-    <li role="presentation"><a href="#">Messages</a></li>
-    <li role="presentation"><a href="#">Messages</a></li>
-    <li role="presentation"><a href="#">Messages</a></li>
-    <li role="presentation"><a href="#">Messages</a></li>
-    <li role="presentation"><a href="#">Messages</a></li>
-    <li role="presentation"><a href="#">Messages</a></li>
-
-    <li role="presentation"><a href="#">Messages</a></li>
-    <li role="presentation"><a href="#">Messages</a></li>
-    <li role="presentation"><a href="#">Messages</a></li>
-    <li role="presentation"><a href="#">Messages</a></li>
-    <li role="presentation"><a href="#">Messages</a></li>
-    <li role="presentation"><a href="#">Messages</a></li>
-
-  </ul>
+    <div class="pluginList" id="scroll-thing">
+    <ul class="nav nav-pills nav-stacked" role="tablist" id="pluginList">
+      <li role="presentation" class="active"><a href="#home">Home</a></li>
+      <li role="presentation" ><a href="#profile">Profile</a></li>
+    </ul>
     </div>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <div class="container-blede tab-content">
+      <div class="tab-pane" role="tabpanel" id="profile">
+        <form class="" action="index.html" method="post">
+
+
+        <div class="container">
+            <h2 class="text-center">Plugin Title</h2>
+          <div class="row">
+            <div class="col-md-6 well">Date Published</div>
+            <div class="col-md-6 well">Plugin Author</div>
+            <div class="col-md-6 ">
+              <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select></div>
+            <div class="col-md-6 ">  <button type="submit" class="btn btn-primary">Download Plugin</button></div>
+        </form>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12 well">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="tab-pane" role="tabpanel" id="home">
+        PENEs
+
+      </div>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  $('#pluginList a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
+  $('#pluginList a[href="#profile"]').tab('show') // Select tab by name
+  $('#pluginList a[href="#home"]').tab('show') // Select tab by name
+  </script>
   </body>
 </html>
